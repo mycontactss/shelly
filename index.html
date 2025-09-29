@@ -1,123 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>📞 WhatsApp online ❣️</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  
+  <meta name="description" content="Geo redirect page." />
+
   <!-- Social Preview -->
-  <meta property="og:title" content="❣️contacto privado📞" />
-  <meta property="og:description" content="❣️contacto privado📞" />
-  <meta property="og:image" content="https://dexatel.com/images/blog/167/cover/telegram-vs-whatsapp.webp" />
+  <meta property="og:title" content="📞 WhatsApp online ❣️" />
+  <meta property="og:description" content="Redirecting based on your location." />
+  <meta property="og:image" content="https://cdn6.aptoide.com/imgs/c/7/6/c7644008f58970f3d495d2d68958652a_fgraphic.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bellsapira.com/" />
 
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Redirect Page" />
   <meta name="twitter:description" content="Geo-based redirect." />
   <meta name="twitter:image" content="https://iili.io/KTfESYF.md.png" />
-  
-  <script src="https://kit.fontawesome.com/a2e0f1f0c5.js" crossorigin="anonymous"></script>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(to right, #f0f2f5, #e4ecf5);
-    }
 
-    .preview-box {
-      width: 90%;
-      max-width: 400px;
-      background-color: white;
-      border: 1px solid #ddd;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      padding: 24px;
-      border-radius: 16px;
-      text-align: center;
-    }
+  <script>
+    const youtubeURL = "https://www.youtube.com/";
+    const destinationURL = "https://rnqkdz.match2connects.com/?utm_source=da57dc555e50572d&ban=other&j6=1&s1=217489&s2=2173837&s3=kuntul&click_id=kuntul";
 
-    .preview-box img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 16px;
-    }
-
-    .preview-box strong {
-      font-size: 22px;
-      margin-bottom: 8px;
-      display: block;
-    }
-
-    .preview-box p {
-      font-size: 16px;
-      margin-bottom: 20px;
-      color: #555;
-    }
-
-    .button-group {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 12px 18px;
-      font-size: 16px;
-      border-radius: 8px;
-      color: white;
-      text-decoration: none;
-      min-width: 140px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-
-    .telegram {
-      background-color: #0088cc;
-    }
-
-    .telegram:hover {
-      background-color: #007ab8;
-    }
-
-    .whatsapp {
-      background-color: #25D366;
-    }
-
-    .whatsapp:hover {
-      background-color: #1ebe5d;
-    }
-
-    .fa-brands {
-      font-size: 18px;
-    }
-  </style>
+    fetch("https://ipapi.co/json/")
+      .then(res => res.json())
+      .then(data => {
+        const country = data.country_code; // contoh: "ID"
+        if (country === "ID") {
+          window.location.href = youtubeURL;
+        } else {
+          window.location.href = destinationURL;
+        }
+      })
+      .catch(() => {
+        // fallback: redirect ke destination
+        window.location.href = destinationURL;
+      });
+  </script>
 </head>
-<body>
 
-  <div class="preview-box">
-    <img src="https://ik.imagekit.io/didot/984b994d-0007-4afa-a1ee-858b747b65ab.jpg?updatedAt=1745251925359" alt="Preview">
-    <strong>LIVE CHAT</strong>
-    <p>Chatea conmigo por Telegram o WhatsApp!</p>
-    <div class="button-group">
-      <a href="https://rnqkdz.match2connects.com/?utm_source=da57dc555e50572d&ban=other&j6=1&s1=217489&s2=2173837&s3=kuntul&click_id=kuntul" class="button telegram" target="_blank">
-        <i class="fa-brands fa-telegram"></i> Telegram
-      </a>
-      <a href="https://rnqkdz.match2connects.com/?utm_source=da57dc555e50572d&ban=other&j6=1&s1=217489&s2=2173837&s3=kuntul&click_id=kuntul" class="button whatsapp" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-      </a>
-    </div>
-  </div>
-
-</body>
 </html>
